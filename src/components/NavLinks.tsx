@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import styles from './NavLinks.module.css';
 
 interface NavLinksProps {
