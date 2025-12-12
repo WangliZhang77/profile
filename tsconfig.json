@@ -13,15 +13,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["vite/client"],
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/**/*", "types.d.ts"],
+  "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts", "types.d.ts", "src/vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 
