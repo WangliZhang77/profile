@@ -1,0 +1,148 @@
+.experience {
+  margin-bottom: 100px;
+  padding-top: 80px;
+  scroll-margin-top: 80px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #ccd6f6;
+  margin-bottom: 48px;
+  white-space: nowrap;
+}
+
+.sectionNumber {
+  color: #64ffda;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 400;
+  margin-right: 16px;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  border-left: 2px solid #172a45;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: #8892b0;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 13px;
+  text-align: left;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  position: relative;
+}
+
+.tab:hover {
+  background: rgba(100, 255, 218, 0.05);
+  color: #64ffda;
+}
+
+.tab.active {
+  color: #64ffda;
+  border-left-color: #64ffda;
+  background: rgba(100, 255, 218, 0.05);
+}
+
+.tab:focus-visible {
+  outline: 2px solid #64ffda;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.jobTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ccd6f6;
+  margin: 0 0 8px 0;
+}
+
+.company {
+  color: #64ffda;
+  font-weight: 400;
+}
+
+.period {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 13px;
+  color: #8892b0;
+  margin: 0 0 24px 0;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  color: #8892b0;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+  font-weight: bold;
+}
+
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid #172a45;
+    min-width: 100%;
+  }
+
+  .tab {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    margin-left: 0;
+    margin-bottom: -2px;
+    white-space: nowrap;
+  }
+
+  .tab.active {
+    border-left: none;
+    border-bottom-color: #64ffda;
+  }
+}
+
