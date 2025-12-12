@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
 
     /* Linting */
     "strict": true,
@@ -20,7 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+  "include": ["src", "src/**/*", "types.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 
