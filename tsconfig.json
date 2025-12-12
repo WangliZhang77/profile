@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "skipDefaultLibCheck": true,
     "jsx": "react-jsx",
     "types": ["vite/client"],
 
@@ -23,7 +24,7 @@
     "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts", "types.d.ts", "src/vite-env.d.ts"],
+  "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts", "src/**/*.d.ts", "types.d.ts", "src/vite-env.d.ts", "src/global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 
